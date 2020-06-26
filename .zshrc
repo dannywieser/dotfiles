@@ -8,24 +8,21 @@ fi
 export ZSH="/Users/dannywieser/.oh-my-zsh"
 ZSH_THEME="powerlevel10k"
 
-
-
 # # power level 10K
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # # auto-complete
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Yarn Aliases
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#### Aliases ####
+
+# Yarn
 alias y='yarn'
 alias yd='yarn demo'
-alias ydc='yarn demo:central'
-alias ydm='yarn demo:myseequent'
 alias yt='yarn test'
-alias ytd='yarn test:dev'
-alias yw='yarn watch'
-alias yb='yarn build'
-alias yci='yarn build:ci'
 
 # Git aliases
 alias ga='git add'
@@ -40,5 +37,6 @@ alias gdc='git diff --cached > ~/development/diff/diff.txt; code ~/development/d
 alias gfom='git fetch origin master'
 alias go='git open'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# repos
+alias dev='cd ~/development'
+alias dot='cd ~/dotfiles'
